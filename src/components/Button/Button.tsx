@@ -3,14 +3,18 @@ import { StyledButton } from "./styles";
 
 interface ButtonProps {
   onClick: () => void;
-  disabled: boolean;
+  isDisabled: boolean;
   children: ReactNode;
 }
 
-export const Button = ({ onClick, disabled, children }: ButtonProps) => {
+export const Button = (props: ButtonProps) => {
   return (
-    <StyledButton type="button" disabled={disabled} onClick={onClick}>
-      {children}
+    <StyledButton
+      type="button"
+      disabled={props.isDisabled}
+      onClick={props.onClick}
+    >
+      {props.children}
     </StyledButton>
   );
 };

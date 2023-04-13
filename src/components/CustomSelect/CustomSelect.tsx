@@ -3,7 +3,7 @@ import Select from "react-select";
 import { selectStyle } from "./styles";
 
 export interface Option {
-  value: string;
+  value: number;
   label: string;
 }
 interface CustomSelectProps {
